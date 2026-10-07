@@ -4,7 +4,6 @@ import logging
 import numpy as np
 from typing import List, Dict, Optional, Tuple
 import torch
-import torchaudio
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.preprocessing import StandardScaler
 import librosa
