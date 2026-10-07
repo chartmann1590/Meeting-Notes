@@ -78,7 +78,7 @@ const UploadRecording = () => {
     <div className="min-h-screen bg-gray-50">
       <Navigation />
       <div className="flex min-h-screen w-full flex-col bg-[#18181b]">
-        <header className="sticky top-0 z-10 flex h-16 shrink-0 items-center justify-between border-b border-[#3f3f46] bg-[#18181b]/80 px-6 backdrop-blur-sm">
+        <header className="sticky top-0 z-10 flex h-16 shrink-0 items-center justify-between border-b border-[#3f3f46] bg-[#18181b]/80 px-6 backdrop-blur-xs">
         <div className="flex items-center gap-3">
           <svg className="h-6 w-6 text-[#4f46e5]" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
@@ -109,7 +109,7 @@ const UploadRecording = () => {
         </div>
       </header>
       <main className="flex flex-1 flex-col items-center justify-center p-4 sm:p-6 md:p-8 bg-[#f4f2ed] text-[#312e2b]">
-        <div className="w-full max-w-2xl rounded-lg border border-[#d6d3d1] bg-[#f4f2ed] p-8 shadow-sm">
+        <div className="w-full max-w-2xl rounded-lg border border-[#d6d3d1] bg-[#f4f2ed] p-8 shadow-xs">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-[#312e2b]">Upload Your Recording</h2>
             <p className="mt-2 text-[#78716c]">Drop your audio file below or select it from your device.</p>
@@ -146,7 +146,7 @@ const UploadRecording = () => {
           <div className="mt-8">
             <label className="block text-sm font-medium text-[#312e2b]" htmlFor="speakers">Known Speakers (Optional)</label>
             <input 
-              className="mt-1 block w-full rounded-md border-[#d6d3d1] bg-[#f4f2ed] px-3 py-2 text-[#312e2b] shadow-sm focus:border-[#4f46e5] focus:outline-none focus:ring-1 focus:ring-[#4f46e5] sm:text-sm" 
+              className="mt-1 block w-full rounded-md border-[#d6d3d1] bg-[#f4f2ed] px-3 py-2 text-[#312e2b] shadow-xs focus:border-[#4f46e5] focus:outline-hidden focus:ring-1 focus:ring-[#4f46e5] sm:text-sm" 
               id="speakers" 
               name="speakers" 
               placeholder="e.g., Alice, Bob, Charlie (comma-separated)" 
@@ -184,7 +184,7 @@ const UploadRecording = () => {
             <button 
               onClick={handleUpload}
               disabled={!file || uploading}
-              className="inline-flex items-center justify-center rounded-md bg-[#4f46e5] px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#4f46e5]/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4f46e5] disabled:opacity-50 disabled:cursor-not-allowed" 
+              className="inline-flex items-center justify-center rounded-md bg-[#4f46e5] px-4 py-2 text-sm font-semibold text-white shadow-xs transition-colors hover:bg-[#4f46e5]/90 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4f46e5] disabled:opacity-50 disabled:cursor-not-allowed" 
               type="button"
             >
               {uploading ? 'Uploading...' : 'Upload & Transcribe'}

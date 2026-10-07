@@ -32,7 +32,7 @@ function AppContent() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50">
+      <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-blue-50 to-purple-50">
         <div className="text-center">
           <div className="loading-spinner mx-auto mb-4"></div>
           <p className="text-gray-600 text-lg">Loading your workspace...</p>

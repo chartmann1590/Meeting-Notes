@@ -174,7 +174,7 @@ const Sessions = () => {
             {error && (
               <div className="mb-4 rounded-md bg-red-900/50 border border-red-500/50 p-4">
                 <div className="flex">
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     <span className="material-symbols-outlined text-red-400">error</span>
                   </div>
                   <div className="ml-3">
@@ -195,7 +195,7 @@ const Sessions = () => {
               <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
                 <h2 className="text-3xl font-bold tracking-tight text-white">Sessions Library</h2>
                 <div className="flex gap-2">
-                  <button className="flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-md bg-indigo-600 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700">
+                  <button className="flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-md bg-indigo-600 px-4 text-sm font-medium text-white shadow-xs hover:bg-indigo-700">
                     <span className="material-symbols-outlined">add</span>
                     <span>Upload</span>
                   </button>
@@ -253,7 +253,7 @@ const Sessions = () => {
                     </p>
                     <button
                       onClick={createNewSession}
-                      className="flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-md bg-indigo-600 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 mx-auto"
+                      className="flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-md bg-indigo-600 px-4 text-sm font-medium text-white shadow-xs hover:bg-indigo-700 mx-auto"
                     >
                       <span className="material-symbols-outlined">pod_cast</span>
                       <span>Start First Session</span>
