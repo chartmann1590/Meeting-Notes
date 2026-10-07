@@ -95,7 +95,7 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <button
                 onClick={createNewSession}
                 className="btn-primary text-lg px-8 py-4 flex items-center gap-3 hover-lift"
@@ -210,7 +210,7 @@ const Dashboard = () => {
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded">
+                      <span className="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-sm">
                         ID: {session.id.slice(0, 8)}...
                       </span>
                       <button className="opacity-0 group-hover:opacity-100 transition-opacity text-primary-600 hover:text-primary-700">

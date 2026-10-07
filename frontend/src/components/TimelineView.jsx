@@ -217,7 +217,7 @@ const TimelineView = ({ sessionId, onSpeakerUpdate, onSpeakerMerge }) => {
                 >
                   <div className="flex items-start gap-4">
                     {/* Time and Speaker */}
-                    <div className="flex-shrink-0 w-32">
+                    <div className="shrink-0 w-32">
                       <div className="text-sm font-mono text-gray-500 mb-1">
                         {formatTime(segment.start)} - {formatTime(segment.end)}
                       </div>
@@ -229,7 +229,7 @@ const TimelineView = ({ sessionId, onSpeakerUpdate, onSpeakerMerge }) => {
                         <select
                           value={segment.speaker_id}
                           onChange={(e) => handleSpeakerChange(segment.id, e.target.value)}
-                          className="text-xs bg-transparent border-none focus:outline-none focus:ring-0"
+                          className="text-xs bg-transparent border-none focus:outline-hidden focus:ring-0"
                           onClick={(e) => e.stopPropagation()}
                         >
                           {speakers.map((speaker) => (

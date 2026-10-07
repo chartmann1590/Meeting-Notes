@@ -186,19 +186,19 @@ const SpeakerManager = ({ sessionId, speakers, onSpeakersUpdate }) => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
                 <div className="flex items-center justify-between">
                   <span className="text-blue-700">Toggle Merge Mode</span>
-                  <kbd className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">Ctrl + M</kbd>
+                  <kbd className="px-2 py-1 bg-blue-100 text-blue-800 rounded-sm text-xs">Ctrl + M</kbd>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-blue-700">Add New Speaker</span>
-                  <kbd className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">Ctrl + N</kbd>
+                  <kbd className="px-2 py-1 bg-blue-100 text-blue-800 rounded-sm text-xs">Ctrl + N</kbd>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-blue-700">Cancel/Close</span>
-                  <kbd className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">Escape</kbd>
+                  <kbd className="px-2 py-1 bg-blue-100 text-blue-800 rounded-sm text-xs">Escape</kbd>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-blue-700">Show Shortcuts</span>
-                  <kbd className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">Ctrl + /</kbd>
+                  <kbd className="px-2 py-1 bg-blue-100 text-blue-800 rounded-sm text-xs">Ctrl + /</kbd>
                 </div>
               </div>
             </div>
@@ -234,7 +234,7 @@ const SpeakerManager = ({ sessionId, speakers, onSpeakersUpdate }) => {
                 type="text"
                 value={newSpeakerName}
                 onChange={(e) => setNewSpeakerName(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter speaker name"
               />
             </div>
@@ -247,7 +247,7 @@ const SpeakerManager = ({ sessionId, speakers, onSpeakersUpdate }) => {
                   type="color"
                   value={newSpeakerColor}
                   onChange={(e) => setNewSpeakerColor(e.target.value)}
-                  className="w-12 h-10 border border-gray-300 rounded cursor-pointer"
+                  className="w-12 h-10 border border-gray-300 rounded-sm cursor-pointer"
                 />
                 <span className="text-sm text-gray-600">{newSpeakerColor}</span>
               </div>
@@ -295,7 +295,7 @@ const SpeakerManager = ({ sessionId, speakers, onSpeakersUpdate }) => {
                     {/* Speaker Color and Name */}
                     <div className="flex items-center gap-3">
                       <div
-                        className="w-6 h-6 rounded-full border-2 border-white shadow-sm"
+                        className="w-6 h-6 rounded-full border-2 border-white shadow-xs"
                         style={{ backgroundColor: speaker.color }}
                       ></div>
                       {editingSpeaker === speaker.speaker_id ? (
@@ -303,7 +303,7 @@ const SpeakerManager = ({ sessionId, speakers, onSpeakersUpdate }) => {
                           type="text"
                           value={newSpeakerName}
                           onChange={(e) => setNewSpeakerName(e.target.value)}
-                          className="px-2 py-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="px-2 py-1 border border-gray-300 rounded-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500"
                           onKeyPress={(e) => e.key === 'Enter' && saveEditing()}
                           autoFocus
                         />
@@ -352,7 +352,7 @@ const SpeakerManager = ({ sessionId, speakers, onSpeakersUpdate }) => {
                             type="color"
                             value={speaker.color}
                             onChange={(e) => handleSpeakerColorChange(speaker.speaker_id, e.target.value)}
-                            className="w-8 h-8 border border-gray-300 rounded cursor-pointer opacity-0 absolute"
+                            className="w-8 h-8 border border-gray-300 rounded-sm cursor-pointer opacity-0 absolute"
                             id={`color-${speaker.speaker_id}`}
                           />
                           <label

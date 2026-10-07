@@ -90,7 +90,7 @@ const Settings = () => {
     <div className="min-h-screen bg-gray-50">
       <Navigation />
       <div className="relative flex min-h-screen w-full flex-col bg-slate-950 text-slate-50">
-        <header className="sticky top-0 z-10 flex h-16 items-center justify-between border-b border-slate-800 bg-slate-950/80 px-10 backdrop-blur-sm">
+        <header className="sticky top-0 z-10 flex h-16 items-center justify-between border-b border-slate-800 bg-slate-950/80 px-10 backdrop-blur-xs">
         <div className="flex items-center gap-4">
           <svg className="text-slate-300" fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
             <path d="M4 6h16"></path>
@@ -146,7 +146,7 @@ const Settings = () => {
                     <label className="font-medium text-slate-300" htmlFor="auto-delete-toggle">Auto-delete meetings</label>
                     <p className="text-sm text-slate-500">Automatically delete meetings after a certain number of days.</p>
                   </div>
-                  <label className="relative inline-flex h-6 w-11 cursor-pointer items-center rounded-full bg-slate-700 transition-colors has-[:checked]:bg-blue-600">
+                  <label className="relative inline-flex h-6 w-11 cursor-pointer items-center rounded-full bg-slate-700 transition-colors has-checked:bg-blue-600">
                     <input 
                       checked={settings.autoDelete} 
                       onChange={(e) => handleChange('autoDelete', e.target.checked)}
@@ -185,7 +185,7 @@ const Settings = () => {
                   onChange={(e) => handleChange('filenamePattern', e.target.value)}
                 />
                 <p className="mt-2 text-xs text-slate-500">
-                  Preview: <code className="rounded bg-slate-800 px-1 py-0.5">{generatePreview()}</code>
+                  Preview: <code className="rounded-sm bg-slate-800 px-1 py-0.5">{generatePreview()}</code>
                 </p>
               </div>
             </section>
@@ -258,7 +258,7 @@ const Settings = () => {
             <button 
               onClick={handleSave}
               disabled={loading}
-              className="inline-flex items-center justify-center rounded-md bg-blue-500 px-6 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 disabled:opacity-50"
+              className="inline-flex items-center justify-center rounded-md bg-blue-500 px-6 py-2 text-sm font-semibold text-white shadow-xs transition-colors hover:bg-blue-600 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 disabled:opacity-50"
             >
               {loading ? 'Saving...' : 'Save Settings'}
             </button>

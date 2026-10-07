@@ -384,12 +384,12 @@ const RecordingInterface = ({ sessionId, onTranscriptUpdate }) => {
       </div>
       <div className="absolute bottom-0 right-0 p-6 space-y-4">
         {error && (
-          <div className="flex items-center gap-4 p-4 bg-yellow-900/80 backdrop-blur-sm text-yellow-200 border border-yellow-700 rounded-lg max-w-sm">
+          <div className="flex items-center gap-4 p-4 bg-yellow-900/80 backdrop-blur-xs text-yellow-200 border border-yellow-700 rounded-lg max-w-sm">
             <span className="material-symbols-outlined">mic_off</span>
             <p className="text-sm">{error}</p>
           </div>
         )}
-        <div className="flex items-center gap-4 p-4 bg-green-900/80 backdrop-blur-sm text-green-200 border border-green-700 rounded-lg max-w-sm">
+        <div className="flex items-center gap-4 p-4 bg-green-900/80 backdrop-blur-xs text-green-200 border border-green-700 rounded-lg max-w-sm">
           <span className="material-symbols-outlined">save</span>
           <p className="text-sm">Notes auto-saved successfully.</p>
         </div>
